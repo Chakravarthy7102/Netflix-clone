@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.env
 # firbase
 # /src/lib/firebase.prod.js

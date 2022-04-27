@@ -1,0 +1,22 @@
+version: '3'
+services:
+  front:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - PORT=$PORT
+      - CHOKIDAR_USEPOLLING=true #hot reloading works now!
+    image: react
+    container_name: front
+    restart: unless-stopped
+    stdin_open: true #equal to -it
+    tty: true
+    volumes:
+      - .:/app:ro
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+   

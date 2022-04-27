@@ -1,4 +1,5 @@
 node_modules
 .git*
-Dockerfile
-docker-compose.*
+Dockerfile*
+docker-compose*
+.env

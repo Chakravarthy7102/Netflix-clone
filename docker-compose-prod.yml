@@ -1,0 +1,15 @@
+version: '3'
+services:
+  front:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+      target: react
+    image: react_prod
+    container_name: react_prod
+    restart: always
+    ports:
+      - "3000:80"
+
+#  docker-compose -f .\docker-compose-prod.yml -d  up
+# --target flag --> Set the target build stage to build
